@@ -1,0 +1,170 @@
+//----------------------
+//-- CONTAINER CONTACT
+//----------------------
+.contact-section .section-content{
+  float: none;
+  text-align: center;
+  padding: 0;
+
+  .section-title{
+    text-align: center;
+    display: flex;
+    float: none;
+    margin: 0 auto;
+
+    .bloc{
+      margin: 0 auto;
+    }
+  }
+}
+
+
+
+
+//----------------------
+//-- CONTENTS CONTACT
+//----------------------
+.contact-section .section-content .section-title .bloc{
+  h2{
+    margin-bottom: 4.28571rem;
+  }
+
+  > .row{
+    margin-bottom: 2.85714rem;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    .wrap-content{
+      text-align: center;
+      padding-top: 4%;
+
+      h4{
+        font-size: 2rem;
+      }
+
+      a{
+        font-family: $font-family-content;
+        font-size: 1rem;
+        color: $text-muted;
+      }
+    }
+  }
+}
+
+
+
+
+//------------------------
+//-- BLOC IMAGE CONTACT
+//------------------------
+.contact-section .section-image{
+  display: none;
+  width: calc(66.66667% - 8%);
+  height: 100%;
+  background-image: url(../../images/contact.jpg);
+  background-size: cover;
+}
+
+
+
+
+//----------------------
+//-- RESPONSIVE
+//----------------------
+@media(min-width: $screen-sm) {
+  .contact-section{
+    height: 100%;
+    padding: 0;
+    max-height: 500px;
+
+    .container{
+      width: 100%;
+
+      .section-title{ margin-top: 1.5rem; }
+
+      .section-content{
+        margin-left: 8%;
+        float: left;
+
+        .section-title{
+          text-align: left;
+          display: flex;
+          min-height: auto;
+
+          .bloc{
+            h2{
+              margin-bottom: 2.5rem;
+
+              span{ display: block; }
+            }
+
+            > .row{
+              margin-bottom: 1rem;
+
+              .wrap-content{
+                text-align: left;
+                padding-top: 4%;
+
+                h4{ font-size: 1.5rem; }
+                a{ font-size: .8rem; }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section-image{
+      display: block;
+      width: calc(58.33333% - 8%);
+    }
+  }
+}
+
+
+
+
+@media(min-width: $screen-md) {
+  .contact-section{
+    // height: 100%;
+    max-height: 560px;
+
+    .container .section-content{
+      margin-left: 4%;
+
+      .section-title{ max-width: 400px;}
+
+      .section-title .bloc .row .col-xs-9{
+        text-align: left;
+        padding-top: 4%;
+      }
+    }
+
+    .section-image{ width: calc(66.66667% - 4%); }
+  }
+}
+
+
+
+@media(min-width: $screen-lg) {
+  .contact-section{
+    max-height: 700px;
+  }
+}
+
+
+
+@media (min-width:$screen-sm) and (max-width:$screen-sm) and (orientation:portrait){
+  .contact-section{ height: 100%; min-height: auto; max-height: 870px; }
+  .contact-section .container > .row{ display: flex; }
+  .contact-section .container > .row .section-content{ margin: auto; }
+  .contact-section .section-image{ background-position: 50% 90%; }
+}
+
+@media (min-width:$screen-sm) and (max-width:$screen-lg) and (orientation:landscape){
+  .contact-section{ height: 100%; min-height: auto; max-height: 720px; }
+  .contact-section .container > .row{ display: flex; }
+  .contact-section .container > .row .section-content{ margin: auto; }
+}

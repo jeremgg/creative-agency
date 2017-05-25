@@ -6,6 +6,8 @@
 }
 
 .navbar-default{
+  &.in{ height: 100%; }
+
   .container{
     height: 100%;
     padding: 0;
@@ -61,7 +63,7 @@
 //----------------------
 .navbar-default .container .navbar-header .navbar-brand{
   padding: 3px 0;
-  margin-left: 15px;
+  margin-left: 1.07142rem;
 
   img{ max-width: 150px; }
 }
@@ -73,7 +75,7 @@
 // -- NAVIGATION
 //-------------------
 .navbar-inverse{
-  height: 100%;
+  height: calc(100% - 51px);
 
   .navbar-collapse{
     height: 100%;
@@ -89,7 +91,7 @@
       float: none !important;
 
       li{
-        height: 70px;
+        height: 55px;
 
         a{
           height: 100%;
@@ -128,6 +130,9 @@
 //------------------
 //-- RESPONSIVE
 //------------------
+
+
+
 @media(min-width:$screen-sm) and (max-width:991px) {
   .navbar-default .container{
     width: 100%;
@@ -167,7 +172,7 @@
 
         .navbar-brand{
           padding: 3px 0;
-          margin-left: 15px;
+          margin-left: .75rem;
           height: auto;
 
           img{
@@ -199,8 +204,8 @@
             height: auto;
             font-size: 1.25rem;
             line-height: 1;
-            padding: 0 15px;
-            padding-bottom: 10px;
+            padding: 0 .75rem;
+            padding-bottom: .5rem;
 
             &:hover{
               background: transparent;
