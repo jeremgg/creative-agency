@@ -1,0 +1,174 @@
+/* ===========================
+        SECTIONS BLOG
+=========================== */
+.blog-section .section-content{
+    .post-group{
+        max-width: 400px;
+        padding: 0;
+        margin: 0 auto;
+        margin-bottom: 1.42857em;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    @media(min-width: 768px){
+        .post-group{
+            max-width: 66.66667%;
+            margin: 0;
+
+            &:first-child{
+                padding-right: 1.9em;
+            }
+        }
+    }
+}
+
+
+
+
+/* ===========================
+     SECTIONS BLOG POSTS
+=========================== */
+.blog-section .section-content > .bloc .post-group{
+    > .post{
+        margin: 0 0 1.5em 0;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+/* ==================================
+     SECTIONS BLOG POSTS IMAGE
+================================== */
+.blog-section .section-content > .bloc .post-group > .post{
+    .post-image{
+        padding: 0;
+        margin-bottom: 1.5em;
+
+        img{
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .date{
+            position: absolute;
+            display: inline-block;
+            bottom: .75em;
+            left: .75em;
+            padding: .5em;
+            text-align: center;
+            background: $primary;
+
+            span{
+                display: block;
+                font-family: $font-family-date;
+                font-size: .75em;
+                line-height: 1;
+                text-transform: uppercase;
+
+                &.day{
+                    font-family: $font-family-title;
+                    font-size: 3.15em;
+                }
+            }
+        }
+    }
+
+    @media(min-width: 768px){
+        .post-image{
+            position: relative;
+            margin-bottom: 0;
+            overflow: hidden;
+
+            img{
+                position: absolute;
+                left: -15%;
+                width: 150%;
+                max-width: 150%;
+                // top: 50%;
+                // height: 100%;
+                // padding-top: 66.66%;
+                // transform: translate(-50%,-50%);
+            }
+        }
+    }
+}
+
+
+
+
+
+/* ==================================
+     SECTIONS BLOG POSTS CONTENT
+================================== */
+.blog-section .section-content > .bloc .post-group > .post{
+    .post-content{
+        padding: 0;
+
+        h4{
+            margin-bottom: .5em;
+        }
+
+        p{
+            margin-bottom: 0;
+        }
+    }
+
+    @media(min-width: 768px){
+        .post-content{
+            padding-left: 1em;
+        }
+    }
+}
+
+
+
+
+
+/* =========================================
+      SECTIONS BLOG LAST POST RESPONSIVE
+========================================= */
+@media(min-width: 768px){
+    .blog-section .section-content > .bloc .post-group:last-child > .last-post{
+        height: 100%;
+
+        .post-image{
+            height: 100%;
+            margin-bottom: 0;
+
+            img{
+                width: auto;
+                height: 100%;
+            }
+
+            .date{
+                top: .75em;
+                bottom: inherit;
+                left: .75em;
+            }
+        }
+
+        .post-content{
+            position: absolute;
+            bottom: 0;
+            width: calc(100% - (2 * .75em));
+            padding-left: 0;
+            margin: 0 .75em;
+
+            h4, p{
+                color: $white !important;
+            }
+
+            p{
+                margin-bottom: .75em;
+            }
+        }
+    }
+}

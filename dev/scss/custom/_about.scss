@@ -1,0 +1,133 @@
+/* ===========================
+      SECTIONS SERVICES
+=========================== */
+.about-section{
+    .section-intro{
+        margin-bottom: 2em;
+    }
+
+    @media(min-width:992px){
+        .section-intro{
+            display: flex;
+            margin-bottom: 0;
+
+            align-items: center;
+        }
+    }
+
+    .section-content{
+        height: inherit;
+        padding: 1.42857em 1em;
+        padding-bottom: 3em;
+        background-image: url(../img/bg-services.jpg);
+        background-size: cover;
+
+        > .bloc{
+            margin: 0 auto;
+            margin-top: 2.25em;
+
+            &:first-child{
+                margin-top: 0;
+            }
+
+            > div{
+                padding: 0;
+
+                &:last-child:after{
+                    content: '';
+                    display: block;
+                    height: 1px;
+                    margin-top: 2.25em;
+                    background: $white;
+                }
+            }
+
+            &:last-child div:last-child:after{
+                display: none;
+            }
+        }
+    }
+
+
+    @media(min-width:768px){
+        .section-content{
+            background-repeat: no-repeat;
+            background-size: 50% 100%;
+
+            > .bloc{
+                margin-top: 0;
+
+                > div{
+                    &.rubrique{
+                        padding-top: 1.75em;
+                        padding-right: 2.5em;
+                        padding-left: 3.5em;
+
+                        &:after{
+                            content: '';
+                            display: block;
+                            height: 1px;
+                            margin-top: 2.25em;
+                            background: $white;
+                        }
+                    }
+
+                    &.content{
+                        padding-top: 1.1em;
+                        padding-left: calc((3em / 2) + 1em);
+
+                        &:after{
+                            display: none;
+                        }
+                    }
+                }
+
+                &:last-child .rubrique:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+/* ===========================
+     SECTIONS ABOUT CONTENT
+=========================== */
+.about-section .section-content > .bloc > div{
+    h3, h4, p{
+        text-align: center;
+    }
+
+    .wrap-icon{
+        display: none;
+    }
+
+    @media(min-width:768px){
+        h3, h4{
+            text-align: right;
+        }
+
+        p{
+            color: $gray-600 !important;
+            text-align: left;
+        }
+
+        .wrap-icon{
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: calc(100% - (3em / 2 ));
+            width: 3em;
+            height: 3em;
+            line-height: 2.75em;
+            text-align: center;
+            background: $white;
+            border: 2px solid $primary;
+            border-radius: 100%;
+            transform: translateY(-50%);
+        }
+    }
+}

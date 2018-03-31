@@ -1,0 +1,245 @@
+/* ===========================
+            NAVBAR
+=========================== */
+.navbar{
+    padding: 0;
+    border: 1px solid $gray-200;
+
+    @media screen and (max-width: 768px) and (orientation: landscape){
+        .container{
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.bg-dark{
+    background-color: $black !important;
+}
+
+@media screen and (min-width: 992px){
+    .navbar{
+        padding-top: 1.5em;
+        margin: 0;
+        border: none;
+        transition: all .5s ease-in-out;
+    }
+
+    #mainNav.top-nav-collapse{
+        padding: 0;
+        padding: .5em 0;
+        background: $black !important;
+    }
+
+    .bg-dark{
+        background-color: transparent !important;
+    }
+}
+
+
+
+
+
+/* ===========================
+             LOGO
+=========================== */
+.navbar .navbar-brand{
+    margin-left: 1.07142em;
+
+    img{
+        max-width: 150px;
+    }
+}
+
+@media screen and (min-width: 992px){
+    .navbar{
+        .navbar-brand{
+            padding: 0;
+            margin-left: 0;
+
+            img{
+                max-width: 95%;
+            }
+
+            &.top-nav-collapse .navbar-brand img{
+                max-width: 65%;
+                padding-bottom: .5em;
+            }
+        }
+    }
+}
+
+
+
+
+
+/* ===========================
+         BURGER MENU
+=========================== */
+.navbar-toggler{
+    position: relative;
+    display: block;
+    padding: .55em;
+    border: none;
+    outline: none;
+
+    &:focus{
+        border: none;
+        outline: none;
+    }
+}
+
+
+.navbar-toggler{
+    .icon-bar{
+        display: block;
+        width: 1.1em;
+        height: 2px;
+        background-color: $white;
+        border-radius: 1px;
+        transition: all .3s ease-in-out;
+
+        + .icon-bar{
+            margin-top: 4px;
+        }
+    }
+
+    &:hover .icon-bar{
+        background-color: $white;
+    }
+
+    &.is-active{
+        transition: all .3s ease-in-out;
+        transition-delay: .6s;
+        transform: rotate(45deg);
+
+        .icon-bar{
+            transition: all .3s ease-in-out;
+
+            &:nth-child(3){
+                width: 0;
+            }
+
+            &:nth-child(2), &:nth-child(4){
+                transition-delay: .3s;
+            }
+
+            &:nth-child(2){
+                transform: translateY(7px);
+            }
+            &:nth-child(4){
+                transform: translateY(-5px) rotate(90deg);
+            }
+        }
+    }
+}
+
+
+
+
+/* ===========================
+     NAVIGATION CONTAINER
+=========================== */
+.navbar .navbar-collapse{
+    &.show{
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar-nav{
+        margin: 0 auto;
+        overflow-y: auto;
+    }
+
+    @media screen and (min-width: 992px){
+        &.show{
+            min-height: auto !important;
+        }
+
+        .navbar-nav{
+            margin-top: .5em;
+            margin-right: 0;
+        }
+    }
+}
+
+
+
+
+/* ===========================
+      NAVIGATION CONTENT
+=========================== */
+.navbar .navbar-collapse .navbar-nav{
+    > li{
+        width: 100%;
+        text-align: center;
+
+        a{
+            height: 100%;
+            padding: 0;
+            font-family: $font-family-nav;
+            font-size: 2.5em;
+            line-height: 1.25em;
+            color: $white;
+            text-align: center;
+
+            &:hover{
+                color: $black;
+                background: $white;
+            }
+
+            &.active{
+                color: $white;
+                background: transparent;
+                opacity: .25;
+
+                &:hover{
+                    color: $black;
+                    background: $white;
+                }
+            }
+        }
+
+        @media (max-height: 320px) and (orientation: landscape){
+            a{
+                font-size: 1.7em;
+            }
+        }
+
+        @media (min-height: 321px) and (max-height: 375px) and (orientation: landscape){
+            a{
+                font-size: 2em;
+            }
+        }
+
+
+
+        @media screen and (min-width: 992px){
+            a{
+                height: auto;
+                padding: 0 .75em;
+                padding-bottom: .5em;
+                font-size: 1.5em;
+                line-height: 1;
+
+                &:hover{
+                    color: $white;
+                    background: transparent;
+                    border-bottom: 4px solid $white;
+                }
+
+                &.active{
+                    border-bottom: 4px solid $white;
+                    opacity: 1;
+
+                    &:hover{
+                        color: $white;
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+}

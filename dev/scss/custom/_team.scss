@@ -1,0 +1,50 @@
+/* ===========================
+        SECTIONS TEAM
+=========================== */
+.team-section .section-content{
+    .team-single{
+        max-width: 400px;
+        padding: 0 1.25em;
+        margin: 0 auto;
+        margin-top: 2em;
+        margin-bottom: 1.42857em;
+        overflow: hidden;
+        text-align: center;
+
+        &:first-child{
+            margin-top: 0;
+        }
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    @media(min-width:768px){
+        .team-single{
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+
+
+/* ============================
+     SECTIONS TEAM CONTENT
+============================ */
+.team-section .section-content > .bloc .team-single{
+    img{
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    h3{
+        margin-top: 1em;
+    }
+
+    h4{
+        margin-bottom: .85em;
+    }
+}

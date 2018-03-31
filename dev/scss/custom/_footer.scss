@@ -1,0 +1,16 @@
+/* ===========================
+           FOOTER
+=========================== */
+footer{
+    padding: 3em 0;
+    text-align: center;
+    background: $gray-100;
+
+    p{
+        padding: 0;
+        margin-bottom: 0;
+        font-family: $font-family-content;
+        font-size: 1em;
+        color: $gray-600;
+    }
+}

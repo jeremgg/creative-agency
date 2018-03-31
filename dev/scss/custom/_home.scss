@@ -1,0 +1,69 @@
+/* ===========================
+        SECTION HOME
+=========================== */
+.home-section{
+    background-image: url(../img/bg-home.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+@media(min-width:768px){
+    section.home-section{
+        min-height: 100%;
+    }
+}
+
+@media (max-height: 500px) and (min-width: 768px) and (orientation: landscape){
+    .home-section{
+        margin-top: 1em !important;
+    }
+}
+
+
+
+
+
+/* ===========================
+        HOME CONTENT
+=========================== */
+.home-section .container .row .section-content{
+    max-width: 550px;
+    padding: 0;
+    margin: auto 0;
+
+    p{
+        margin-top: 1.78571em;
+        margin-bottom: 3.21428em;
+    }
+
+    .link{
+        max-width: 200px;
+        margin: 0 auto;
+        text-align: center;
+
+        .btn{
+            padding: .5em 3em;
+            font-size: 1.42857em;
+            border: solid 4px $primary;
+
+            &.btn-secondary{
+                margin-top: 1.42857em;
+                background: transparent;
+                border-color: $white;
+            }
+        }
+    }
+
+    @media(min-width: 768px){
+        .link{
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: left;
+
+            .btn.btn-secondary{
+                margin-top: 0;
+                margin-left: 1.42857em;
+            }
+        }
+    }
+}

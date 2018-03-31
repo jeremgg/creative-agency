@@ -1,0 +1,41 @@
+/* ========================================
+      SECTIONS SERVICES CONTENT BLOCK
+======================================== */
+.services-section .section-content{
+    .service-single{
+        max-width: 400px;
+        padding: 1em 1.25em;
+        margin: 0 auto;
+        margin-bottom: 1.42857em;
+        text-align: center;
+        background: $white;
+
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+
+    @media(min-width:768px){
+        .service-single{
+            max-width: calc(33.33333% - (2 * .75em));
+            margin: 0 .75em;
+
+            &:nth-child(-n+3){
+                margin-bottom: 1em;
+            }
+        }
+    }
+}
+
+
+
+
+/* ================================
+     SECTIONS SERVICES CONTENT
+================================ */
+.services-section .section-content .bloc .service-single{
+    h4{
+        margin-top: .85em;
+        margin-bottom: .5em;
+    }
+}
